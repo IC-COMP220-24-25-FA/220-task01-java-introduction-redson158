@@ -5,8 +5,8 @@ public class Rectangle {
     private double width;
 
     public Rectangle(double length, double width){
-        if(length >= 1){
-            if(width >= 1){
+        if(length >= 0){
+            if(width >= 0){
                 this.length = length;
                 this.width = width;
             }else{
@@ -18,7 +18,8 @@ public class Rectangle {
     }
 
     public double calcArea(){
-       throw new RuntimeException("Not implemented yet");
+       double area = this.length * this.width;
+       return area;
     }
 
     public void doubleSize(){
