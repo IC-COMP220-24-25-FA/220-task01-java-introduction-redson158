@@ -17,7 +17,14 @@ public class RectangleTest {
 
     @Test
     public void testCalcArea(){
+        Rectangle rectangle1 = new Rectangle(3, 4);
+        assertEquals(12, rectangle1.calcArea(), 0.0001);
 
+        Rectangle rectangle2 = new Rectangle(1, 1);
+        assertEquals(1, rectangle2.calcArea(), 0.0001);
+
+        Rectangle rectangle3 = new Rectangle(0.5, 0.4);
+        assertEquals(0.2, rectangle3.calcArea(), 0.0001);
     }
 
     @Test
