@@ -5,7 +5,16 @@ public class Rectangle {
     private double width;
 
     public Rectangle(double length, double width){
-        throw new RuntimeException("Not implemented yet");
+        if(length >= 1){
+            if(width >= 1){
+                this.length = length;
+                this.width = width;
+            }else{
+                throw new IllegalArgumentException("Width must be positive");
+            }
+        }else{
+            throw new IllegalArgumentException("Length must be positive");
+        }
     }
 
     public double calcArea(){
