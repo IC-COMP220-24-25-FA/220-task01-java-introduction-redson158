@@ -29,7 +29,20 @@ public class RectangleTest {
 
     @Test
     public void testDoubleSize(){
+        Rectangle rectangle1 = new Rectangle(3, 4);
+        rectangle1.doubleSize();
+        double area1 = rectangle1.calcArea();
+        assertEquals(24, area1, 0.0001);
 
+        Rectangle rectangle2 = new Rectangle(1, 1);
+        rectangle2.doubleSize();
+        double area2 = rectangle2.calcArea();
+        assertEquals(2, area2, 0.0001);
+
+        Rectangle rectangle3 = new Rectangle(0.5, 0.4);
+        rectangle3.doubleSize();
+        double area3 = rectangle3.calcArea();
+        assertEquals(0.4, area3, 0.0001);
     }
 
     @Test
