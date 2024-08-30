@@ -27,13 +27,9 @@ public class Rectangle {
     }
 
     public double longestLineWithin(){
-        if(this.length == this.width){
-            return this.length;
-        }else if(this.length > this.width){
-            return this.length;
-        }else{
-            return this.width;
-        }
+        double diagonalSquared = Math.pow(this.length, 2) + Math.pow(this.width, 2);
+        double diagonal = Math.sqrt(diagonalSquared);
+        return diagonal;
     }
     
 }
