@@ -18,7 +18,8 @@ public class Triangle {
     }
 
     public double calcArea(){
-        return 0;
+        double area = 0.5 * base * height;
+        return area;
     }
 
     public void doubleSize(){
