@@ -18,7 +18,17 @@ public class TriangleTest {
 
     @Test
     public void testCalcArea(){
+        Triangle tri1 = new Triangle(3, 3);
+        double area1 = tri1.calcArea();
+        assertEquals(4.5, area1, 0.0001);
 
+        Triangle tri2 = new Triangle(5, 4);
+        double area2 = tri2.calcArea();
+        assertEquals(10, area2, 0.0001);
+
+        Triangle tri3 = new Triangle(0.5, 0.4);
+        double area3 = tri3.calcArea();
+        assertEquals(0.1, area3, 0.00001);
     }
 
     @Test
