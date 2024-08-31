@@ -11,7 +11,9 @@ public class TriangleTest {
 
     @Test
     public void testTriangleConstructor(){
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(-2, 4));
 
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(3, 0));
     }
 
     @Test
@@ -26,6 +28,6 @@ public class TriangleTest {
 
     @Test
     public void testLongestLineWithin(){
-        
+
     }
 }
