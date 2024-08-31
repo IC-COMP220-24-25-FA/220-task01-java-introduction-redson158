@@ -28,6 +28,8 @@ public class Triangle {
     }
 
     public double longestLineWithin(){
-        throw new RuntimeException("Method not implemented");
+        double hypSqrd = Math.pow(base, 2) + Math.pow(height, 2);
+        double hyp = Math.sqrt(hypSqrd);
+        return hyp;
     }
 }
