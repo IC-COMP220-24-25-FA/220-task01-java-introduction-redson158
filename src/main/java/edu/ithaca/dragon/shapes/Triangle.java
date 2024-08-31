@@ -23,7 +23,8 @@ public class Triangle {
     }
 
     public void doubleSize(){
-        throw new RuntimeException("Method not implemented");
+        base *= 2;
+        height *= 2;
     }
 
     public double longestLineWithin(){
