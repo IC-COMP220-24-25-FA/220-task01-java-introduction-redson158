@@ -33,7 +33,20 @@ public class TriangleTest {
 
     @Test
     public void testDoubleSize(){
+        Triangle tri1 = new Triangle(3, 3);
+        tri1.doubleSize();
+        double newArea1 = tri1.calcArea();
+        assertEquals(18, newArea1, 0.0001);
 
+        Triangle tri2 = new Triangle(5, 4);
+        tri2.doubleSize();
+        double newArea2 = tri2.calcArea();
+        assertEquals(40, newArea2, 0.0001);
+
+        Triangle tri3 = new Triangle(0.5, 0.4);
+        tri3.doubleSize();
+        double newArea3 = tri3.calcArea();
+        assertEquals(0.4, newArea3, 0.0001);
     }
 
     @Test
