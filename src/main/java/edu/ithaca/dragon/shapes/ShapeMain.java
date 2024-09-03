@@ -24,7 +24,7 @@ public class ShapeMain {
             System.out.println("Longest Line Within: " + rectangle.longestLineWithin());
         }
         
-
+        for(int i = 0; i < 5; i++){
             System.out.println("Choose a rectangle (1-5): ");
             int choice = scanner.nextInt();
             if (choice >= 1 && choice <= 5) {
@@ -36,7 +36,8 @@ public class ShapeMain {
                 System.out.println("Area: " + rectangle.calcArea());
                 System.out.println("Longest Line Within: " + rectangle.longestLineWithin());
             }
-        
+        }
+
         scanner.close();
     }
 }
