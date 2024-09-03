@@ -12,19 +12,18 @@ public class ShapeMain {
         //Use a loop to repeat the process 5 times
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
+        ArrayList<Rectangle> rectList = new ArrayList<>();
+         for (int i = 0; i < 5; i++) {
+            rectList.add(new Rectangle(rand.nextDouble() * 10, rand.nextDouble() * 10));
+        }
 
-         for (int j = 0; j < 5; j++) {
-            List<Rectangle> rectList = new ArrayList<>();
-            for (int i = 0; i < 5; i++) {
-                rectList.add(new Rectangle(rand.nextDouble() * 10, rand.nextDouble() * 10));
-            }
-
-            for (int i = 0; i < rectList.size(); i++) {
-                Rectangle rectangle = rectList.get(i);
-                System.out.println("Rectangle " + (i + 1) + ":");
-                System.out.println("Area: " + rectangle.calcArea());
-                System.out.println("Longest Line Within: " + rectangle.longestLineWithin());
-            }
+        for (int i = 0; i < rectList.size(); i++) {
+            Rectangle rectangle = rectList.get(i);
+            System.out.println("Rectangle " + (i + 1) + ":");
+            System.out.println("Area: " + rectangle.calcArea());
+            System.out.println("Longest Line Within: " + rectangle.longestLineWithin());
+        }
+        
 
             System.out.println("Choose a rectangle (1-5): ");
             int choice = scanner.nextInt();
@@ -34,11 +33,10 @@ public class ShapeMain {
 
             System.out.println("Updated Rectangles:");
             for (Rectangle rectangle : rectList) {
-                System.out.println("Area:" + rectangle.calcArea());
-                System.out.println("Longest Line Within:" + rectangle.longestLineWithin());
+                System.out.println("Area: " + rectangle.calcArea());
+                System.out.println("Longest Line Within: " + rectangle.longestLineWithin());
             }
-        }
-
+        
         scanner.close();
     }
 }
