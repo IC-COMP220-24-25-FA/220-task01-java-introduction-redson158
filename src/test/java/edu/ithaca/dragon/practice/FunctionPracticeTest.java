@@ -46,8 +46,9 @@ public class FunctionPracticeTest {
     public void testGoodDog(){
         assertTrue(FunctionPractice.isGoodDog(4, 38, true));
         assertFalse(FunctionPractice.isGoodDog(3, 0, false));
-        assertTrue(FunctionPractice.isGoodDog(10, 10, false));
-        assertFalse(FunctionPractice.isGoodDog(1, 0, true));
+        assertTrue(FunctionPractice.isGoodDog(10, 10, true));
+        assertFalse(FunctionPractice.isGoodDog(8, 9, true));
+        assertFalse(FunctionPractice.isGoodDog(1, 0, false));
     }
     
 }
