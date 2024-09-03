@@ -86,9 +86,9 @@ public class FunctionPracticeTest {
     @Test
     public void testFindFirstMostOccurencesOfLetter(){
         ArrayList<String> list1 = new ArrayList<>();
-        assertEquals("", FunctionPractice.findFirstMostOccurencesOfLetter(list1, 'a'));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.findFirstMostOccurencesOfLetter(list1, 'a'));
 
-        ArrayList<String> list2 = new ArrayList<>(Arrays.asList("happy", "puppy", "pops", "hello"));
+        ArrayList<String> list2 = new ArrayList<>(Arrays.asList("happy", "guppy", "pops", "hello"));
         assertEquals("happy", FunctionPractice.findFirstMostOccurencesOfLetter(list2, 'p'));
 
         ArrayList<String> list3 = new ArrayList<>(Arrays.asList("hello", "world", "python", "java"));

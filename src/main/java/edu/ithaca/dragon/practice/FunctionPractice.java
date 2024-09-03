@@ -104,11 +104,28 @@ public class FunctionPractice {
 
     /**
      * @return the string that has contains the most occurences of the given letter
-     * @throws 
+     * @throws IllegalArgumentException if list is empty or null
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
-    }
+        if(words == null || words.isEmpty()){
+            throw new IllegalArgumentException("List cannot be empty");
+        }else{
+        int winningCount = 0;
+        String winningWord = "";
+        for(String word : words){
+            int charCount = 0;
+            for(int i = 0; i < word.length(); i++){
+                if(word.charAt(i) == letter){
+                    charCount ++;
+                }
+            }
+            if(charCount > winningCount){
+                winningCount = charCount;
+                winningWord = word;
+            }
+        }
+        return winningWord;
+    }}
 
 
 }
