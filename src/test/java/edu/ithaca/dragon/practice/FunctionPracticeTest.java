@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
@@ -49,6 +51,21 @@ public class FunctionPracticeTest {
         assertTrue(FunctionPractice.isGoodDog(10, 10, true));
         assertFalse(FunctionPractice.isGoodDog(8, 9, true));
         assertFalse(FunctionPractice.isGoodDog(1, 0, false));
+    }
+
+    @Test
+    public void testFindFirstLargest(){
+        ArrayList<Integer> list1 = new ArrayList<>();
+        assertEquals(-1, FunctionPractice.findFirstLargest(list1));
+
+        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(3, 4, 5, 6, 2));
+        assertEquals(3, FunctionPractice.findFirstLargest(list2));
+
+        ArrayList<Integer> list3 = new ArrayList<>(Arrays.asList(5, 5, 5, 5, 3));
+        assertEquals(0, FunctionPractice.findFirstLargest(list3));
+
+        ArrayList<Integer> list4 = new ArrayList<>(Arrays.asList(-3, -8, -4, -2));
+        assertEquals(3, FunctionPractice.findFirstLargest(list4));
     }
     
 }
