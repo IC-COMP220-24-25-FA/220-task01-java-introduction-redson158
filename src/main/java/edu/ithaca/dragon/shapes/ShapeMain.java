@@ -25,6 +25,10 @@ public class ShapeMain {
         for(Shape shape : shapes){
             System.out.println(shape.toString());
         }
+        for(Shape shape : shapes){
+            shape.doubleSize();
+            System.out.println(shape.toString());
+        }
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
         ArrayList<Rectangle> rectList = new ArrayList<>();
