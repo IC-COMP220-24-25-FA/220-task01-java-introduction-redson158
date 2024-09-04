@@ -31,5 +31,9 @@ public class Rectangle implements Shape{
         double diagonal = Math.sqrt(diagonalSquared);
         return diagonal;
     }
+
+    public String toString(){
+        return "Rectangle: Length = " + length + ", Width = " + width;
+    }
     
 }

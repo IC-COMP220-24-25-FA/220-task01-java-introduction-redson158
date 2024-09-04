@@ -32,4 +32,8 @@ public class Triangle implements Shape{
         double hyp = Math.sqrt(hypSqrd);
         return hyp;
     }
+
+    public String toString(){
+        return "Triangle; Base = " + base + ", Height = " + height;
+    }
 }
