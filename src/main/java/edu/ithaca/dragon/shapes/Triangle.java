@@ -1,14 +1,14 @@
 package edu.ithaca.dragon.shapes;
 
-public class Triangle {
+public class Triangle implements Shape{
     private double base;
     private double height;
 
-    public Triangle(double base, double height){
-        if(base > 0){
-            if(height > 0){
-                this.base = base;
-                this.height = height;
+    public Triangle(double baseIn, double heightIn){
+        if(baseIn > 0){
+            if(heightIn > 0){
+                base = baseIn;
+                height = heightIn;
             }else{
                 throw new IllegalArgumentException("Height must be > 0");
             }
